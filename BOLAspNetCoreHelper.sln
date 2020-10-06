@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOLAspNetCoreHelper", "BOLAspNetCoreHelper\BOLAspNetCoreHelper.csproj", "{3D360715-B5D9-414B-99D5-40AB11D93A43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D360715-B5D9-414B-99D5-40AB11D93A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D360715-B5D9-414B-99D5-40AB11D93A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D360715-B5D9-414B-99D5-40AB11D93A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D360715-B5D9-414B-99D5-40AB11D93A43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE310AFF-E4DE-40ED-9419-FACE0852148D}
+	EndGlobalSection
+EndGlobal
