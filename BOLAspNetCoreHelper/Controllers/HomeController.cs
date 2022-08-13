@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BOLAspNetCoreHelper.Models;
 using System.Globalization;
+using Bugsonline;
 
 namespace BOLAspNetCoreHelper.Controllers
 {
@@ -21,7 +22,7 @@ namespace BOLAspNetCoreHelper.Controllers
             _bol = bol;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             int c = 0;
             try
@@ -30,7 +31,7 @@ namespace BOLAspNetCoreHelper.Controllers
             }
             catch (Exception ex)
             {
-                _bol.Send(ex);
+                await _bol.Send(ex);
             }
             return View();
         }

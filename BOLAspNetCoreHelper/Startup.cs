@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Bugsonline;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,7 +26,14 @@ namespace BOLAspNetCoreHelper
         {
             string BOLUser = this.Configuration.GetSection("Settings").GetSection("BOLUser").Value;
             string BOLPassword = this.Configuration.GetSection("Settings").GetSection("BOLPassword").Value;
-            services.Add(new ServiceDescriptor(typeof(BOLHelper), new BOLHelper(BOLUser, BOLPassword)));
+            BOLHelper bol_init = BOLHelper.initInstance(
+                "demo@demo.com",
+                "cicci0CICCI0_",
+                System.Reflection.Assembly.GetExecutingAssembly().GetName().Name,
+                System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(),
+                AppType.WebApp,
+                Languages.CSharp);
+            services.Add(new ServiceDescriptor(typeof(BOLHelper), bol_init));
 
             services.AddControllersWithViews();
         }
